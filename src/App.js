@@ -1,4 +1,5 @@
-
+import ClassComponent from "./component/ClassComponent";
+import FunctionalComponent from "./component/FunctionalComponent";
 
 function App() {
   function formatName(user){
@@ -12,6 +13,8 @@ function App() {
   return (
     <div className="App">
       {formatName(user)}
+      <ClassComponent prop="Class Prop"/>
+      <FunctionalComponent prop="Function Prop"/>
     </div>
   );
 }
