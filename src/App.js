@@ -1,20 +1,27 @@
 import ClassComponent from "./component/ClassComponent";
 import FunctionalComponent from "./component/FunctionalComponent";
+import Greetings from "./component/Greetings";
+import {useState} from "react";
 
 function App() {
-  function formatName(user){
-    return <h1>Hello ,{user.first + ' '+ user.last}!</h1> 
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
+  let button;
+    if (isLoggedIn){
+      button = <button onClick={handleLog}>Log Out</button>
+    }
+    else{
+      button = <button onClick={handleLog}>Log In</button>
+    }
+  function handleLog() {
+    setIsLoggedIn(!isLoggedIn)
   }
-  const user ={
-    first:"shasha",
-    last:"jen"
-  }
-  
   return (
     <div className="App">
-      {formatName(user)}
       <ClassComponent prop="Class Prop"/>
       <FunctionalComponent prop="Function Prop"/>
+      {button}
+      {isLoggedIn? <h2>you have looged in </h2>:<h2> log in please</h2>}
+      <Greetings isLoggedIn={isLoggedIn}/>
     </div>
   );
 }

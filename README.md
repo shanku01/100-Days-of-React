@@ -135,3 +135,40 @@ setState((state,props)=>({
 "Components are abstract this means neither parents nor childs know about component's state "
 
 "Data flow in unidirection Top-Down "
+
+
+##Day 3
+
+#Handling Events
+React events are named using camelCase, rather than lowercase.
+With JSX you pass a function as the event handler, rather than a string.
+
+<button onClick={onClick}>click me</button>
+
+"Default value is prevented by event.preventDefault();"
+
+"In class component you have to bind event Listner with 'this' "
+<button onClick={this.onclick}>click me <button>
+
+
+#passing arguments with event
+<button onClick={this.onclick.bind(this,param)}>click me <button>
+
+"If you don't bind pramameter you will get unwanted results"
+
+##Conditional Rendering
+You can choose what do you want to render and what you want to encapsulate.
+
+"Note Functions are not valid as react child"
+
+true && expression always evaluates to expression, and false && expression always evaluates to false.
+
+
+#preventing from rendering
+return null instead of its render output.
+
+Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
+
+
+
+
