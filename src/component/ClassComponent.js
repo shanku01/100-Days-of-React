@@ -9,6 +9,7 @@ class ClassComponent extends Component{
         }
         this.handelClick=this.handelClick.bind(this)
     }
+
     componentDidMount(){
         this.TimerID= setInterval(()=>
         this.tick(),
@@ -19,17 +20,21 @@ class ClassComponent extends Component{
         clearInterval(this.TimerID)
     }
 
+    //updates date
     tick(){
         this.setState({
             date : new Date()
         });  
     }
+
+    //updates count
     handelClick(){
         let temp = this.state.count
         this.setState({
             count:temp+1
         })
     }
+
     render(){
         return(
             <div>

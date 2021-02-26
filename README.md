@@ -172,3 +172,50 @@ Returning null from a component’s render method does not affect the firing of 
 
 
 
+##Day 4
+
+#List and Keys
+
+#Renderring Multiple Component
+
+You can build collections of elements and include them in JSX using curly braces {}.
+
+A "key" is a special string attribute you need to include when creating lists of elements, they help React identify which items have changed, are added, or are removed. Unique value like ids or indexes are used for keys.
+"Note - Keys only make sense in the context of the surrounding array."
+<div><li key ={item.id}>{item}</li></div> ## worong
+
+<div key ={item.id}><li>{item}</li></li> ##right way
+
+"""
+Keys serve as a hint to React but they don’t get passed to your components. If you need the same value in your component, 
+pass it explicitly as a prop with a different name
+"""
+
+##JSX allows embedding any expression in curly braces so we could inline the map() result.
+
+
+##Froms
+"""
+HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.
+"""
+
+#Controlled Component
+
+"""
+We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
