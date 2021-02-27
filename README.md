@@ -206,6 +206,22 @@ We can combine the two by making the React state be the “single source of trut
 """
 
 
+##Day 5
+
+#select tag
+React, instead of using this selected attribute, uses a value attribute on the root select tag. 
+
+#handling multiple input
+When you need to handle multiple controlled input elements, you can add a name attribute to each element and let the handler function choose what to do based on the value of event.target.name.
+
+#Controlled null value
+
+
+
+#Lifting State Up
+In React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called “lifting state up”.
+There should be a single “source of truth” for any data that changes in a React application.
+
 
 
 

@@ -3,44 +3,20 @@ import {Component} from "react";
 class ClassComponent extends Component{
     constructor(props){
         super(props)
-        this.state={
-            date : new Date(),
-            count:0
-        }
         this.handelClick=this.handelClick.bind(this)
     }
 
-    componentDidMount(){
-        this.TimerID= setInterval(()=>
-        this.tick(),
-        1000);
-    }
-
-    componentWillUnmount(){
-        clearInterval(this.TimerID)
-    }
-
-    //updates date
-    tick(){
-        this.setState({
-            date : new Date()
-        });  
-    }
-
+    
     //updates count
     handelClick(){
-        let temp = this.state.count
-        this.setState({
-            count:temp+1
-        })
+        this.props.handelClick()
     }
 
     render(){
         return(
             <div>
             <h1>Class Component {this.props.prop}</h1>
-            <button onClick={this.handelClick}>{this.state.count}</button>
-            <h2>Time now - {this.state.date.toLocaleTimeString()}</h2>
+            <button onClick={this.handelClick}>{this.props.count}</button>
             </div>
         );
             

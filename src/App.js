@@ -7,6 +7,7 @@ import {useState,useEffect} from "react";
 function App() {
   const [isLoggedIn,setIsLoggedIn] = useState(false)
   const [myList,seMytList] =useState([]);
+  const [count,setCount] =useState(0)
 
   useEffect(()=>{
     seMytList([1,2,3,4,5])
@@ -27,9 +28,13 @@ function App() {
     <li key={item}>{item}</li>
     )
   });
+
+  function handelClick() {
+    setCount(count+1)
+  }
   return (
     <div className="App">
-      <ClassComponent prop="Class Prop"/>
+      <ClassComponent prop="Class Prop" count={count} handelClick={handelClick}/>
       <FunctionalComponent prop="Function Prop"/>
       {button}
       {isLoggedIn? <h2>you have looged in </h2>:<h2> log in please</h2>}
