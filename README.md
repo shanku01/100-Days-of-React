@@ -221,6 +221,14 @@ When you need to handle multiple controlled input elements, you can add a name a
 #Lifting State Up
 In React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called “lifting state up”.
 There should be a single “source of truth” for any data that changes in a React application.
+Instead of trying to sync the state between different components, you should rely on the top-down data flow.
+
+
+##Day 6
+
+#Composition and Inheritance
+Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way. Remember that components may accept arbitrary props, including primitive values, React elements, or functions.
+
 
 
 

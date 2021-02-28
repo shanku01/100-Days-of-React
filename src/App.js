@@ -2,6 +2,7 @@ import ClassComponent from "./component/ClassComponent";
 import FunctionalComponent from "./component/FunctionalComponent";
 import Greetings from "./component/Greetings";
 import ControlledComponent from "./component/ControlledComponent";
+import CompostionComponent from "./component/CompostionComponent";
 import {useState,useEffect} from "react";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Greetings isLoggedIn={isLoggedIn}/>
       <ul>{myComp}</ul>
       <ControlledComponent/>
+      <CompostionComponent/>
     </div>
   );
 }
