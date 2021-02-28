@@ -229,6 +229,13 @@ Instead of trying to sync the state between different components, you should rel
 #Composition and Inheritance
 Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way. Remember that components may accept arbitrary props, including primitive values, React elements, or functions.
 
+#Creating React App
+1. Divide page in component and sub component.
+2. Create static components.
+3. Use minimal but complete state.
+4. Keep data flow bottom up ot top down.
+
+So, This is all about basic React. I am gonna learn learn advance from tomorrow.
 
 
 
