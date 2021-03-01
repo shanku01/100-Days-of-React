@@ -237,6 +237,78 @@ Props and composition give you all the flexibility you need to customize a compo
 
 So, This is all about basic React. I am gonna learn learn advance from tomorrow.
 
+##Day 7
+
+#Accessibility
+
+Creating a design that can be used by everyone.
+
+##Standards
+
+
+WCAG -
+The Web Content Accessibility Guidelines provides guidelines for creating accessible web sites.
+
+
+WAI-ARIA -
+The Web Accessibility Initiative - Accessible Rich Internet Applications document contains techniques for building fully accessible JavaScript widgets.
+
+attribute-name = {camelCase}
+
+
+Semantic HTML-
+Semantic HTML is the foundation of accessibility in a web application. Using the various HTML elements to reinforce the meaning of information in our websites will often give us accessibility for free.
+
+
+#Accessible Forms
+Focus Control -
+Ensure that your web application can be fully operated with the keyboard only
+
+Mechanisms to skip to desired content-
+Provide a mechanism to allow users to skip past navigation sections in your application as this assists and speeds up keyboard navigation.
+
+Programmatically managing focus-
+To set focus in React, we can use Refs to DOM elements.
+
+Mouse and pointer events
+Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone. 
+
+Setting the language
+Indicate the human language of page texts as screen reader software uses this to select the correct voice settings
+
+Setting the document title
+Set the document <title> to correctly describe the current page content as this ensures that the user remains aware of the current page context
+
+Color contrast
+Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision
+
+##Development and Testing Tools
+
+The keyboard
+By far the easiest and also one of the most important checks is to test if your entire website can be reached and used with the keyboard alone.
+
+Development assistance
+We can check some accessibility features directly in our JSX code. Often intellisense checks are already provided in JSX aware IDE’s for the ARIA roles, states and properties.
+
+Testing accessibility in the browser
+A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only test the technical accessibility of your HTML.
+
+Screen readers
+Testing with a screen reader should form part of your accessibility tests.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
