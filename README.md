@@ -298,6 +298,66 @@ Testing with a screen reader should form part of your accessibility tests.
 
 
 
+# Day 8
+
+# Code-Splitting
+
+#Bunding
+Bundling is the process of following imported files and merging them into a single file.
+
+To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
+
+
+
+# import 
+
+Instead of importing everything before use it at runtime.
+
+import("./math").then(math=>{
+  console.log(math.add(10,20))
+});
+
+
+# React.lazy
+
+const Component = React.lazy(()=> import('./Component'))
+
+<Suspense fallback={<div>Loading...</div>}>
+        <Component />
+</Suspense>
+
+
+# Error boundaries
+
+If the other module fails to load (for example, due to network failure), it will trigger an error. You can handle these errors to show a nice user experience and manage recovery with Error Boundaries. Once you’ve created your Error Boundary, you can use it anywhere above your lazy components to display an error state when there’s a network error.
+
+
+# Route-based code splitting
+Using react router with react lazy.
+
+
+# Named Exports
+
+React.lazy currently only supports default exports. If the module you want to import uses named exports, you can create an intermediate module that reexports it as the default. This ensures that tree shaking keeps working and that you don’t pull in unused components.
+
+
+
+# # Context
+
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+
+# When to use Context
+Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
+
+
+
+
+
+
+
+
+
 
 
 

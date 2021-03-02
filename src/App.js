@@ -1,9 +1,12 @@
+import React,{Suspense} from "react";
+
 import ClassComponent from "./component/ClassComponent";
 import FunctionalComponent from "./component/FunctionalComponent";
 import Greetings from "./component/Greetings";
 import ControlledComponent from "./component/ControlledComponent";
 import CompostionComponent from "./component/CompostionComponent";
 import {useState,useEffect} from "react";
+const Context = React.lazy(()=> import('./component/Context'))
 
 function App() {
   const [isLoggedIn,setIsLoggedIn] = useState(false)
@@ -43,6 +46,9 @@ function App() {
       <ul>{myComp}</ul>
       <ControlledComponent/>
       <CompostionComponent/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Context />
+      </Suspense>
     </div>
   );
 }
