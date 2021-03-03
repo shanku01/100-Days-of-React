@@ -1,12 +1,14 @@
-import React,{Suspense} from "react";
-
+import React from "react";
+import {ThemeContext} from "./component/contexts/theme-context";
 import ClassComponent from "./component/ClassComponent";
 import FunctionalComponent from "./component/FunctionalComponent";
 import Greetings from "./component/Greetings";
 import ControlledComponent from "./component/ControlledComponent";
 import CompostionComponent from "./component/CompostionComponent";
 import {useState,useEffect} from "react";
-const Context = React.lazy(()=> import('./component/Context'))
+import ThemedButton from "./component/ThemedButton";
+
+
 
 function App() {
   const [isLoggedIn,setIsLoggedIn] = useState(false)
@@ -33,6 +35,7 @@ function App() {
     )
   });
 
+
   function handelClick() {
     setCount(count+1)
   }
@@ -46,11 +49,15 @@ function App() {
       <ul>{myComp}</ul>
       <ControlledComponent/>
       <CompostionComponent/>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Context />
-      </Suspense>
+          <ThemeContext.Provider value="light">
+          <ThemedButton>
+          Change Theme
+          </ThemedButton>
+          </ThemeContext.Provider>
     </div>
   );
 }
+
+
 
 export default App;

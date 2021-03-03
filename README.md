@@ -367,6 +367,22 @@ If you only want to avoid passing some props through many levels, component comp
 Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes.
 """
 
+#API
+
+React.createContext
+To Intailize context, takes default value.
+
+Context.Provoder
+Wraps all the component which gonna use context, takes a value.
+
+Class.contextType
+To make context global for any component.
+
+Context.Consumer 
+Takes the context and give react child.
+
+Context.displayName
+Gives a name to context
 
 
 
