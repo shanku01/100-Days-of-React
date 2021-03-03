@@ -1,5 +1,7 @@
 import {Component} from "react";
 
+const MyContext = React.createContext("light");
+
 class ClassComponent extends Component{
     constructor(props){
         super(props)
@@ -13,14 +15,19 @@ class ClassComponent extends Component{
     }
 
     render(){
+        //using this keyword to get the context
+        let value = this.context;
         return(
             <div>
             <h1>Class Component {this.props.prop}</h1>
-            <button onClick={this.handelClick}>{this.props.count}</button>
+            <button theme ={value} onClick={this.handelClick}>{this.props.count}</button>
             </div>
         );
             
     }
 }
+
+//creating contenxt for whole class
+ClassComponent.contextType = MyContext;
 
 export default ClassComponent;

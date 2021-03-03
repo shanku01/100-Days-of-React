@@ -350,6 +350,23 @@ Context provides a way to pass data through the component tree without having to
 # When to use Context
 Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
 
+"""
+If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+"""
+
+
+
+## Day 9
+
+"""
+Note-
+If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+"""
+
+"""
+Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes.
+"""
+
 
 
 
