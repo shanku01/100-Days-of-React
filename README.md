@@ -386,6 +386,27 @@ Gives a name to context
 
 
 
+## Day 10
+
+#Cavets
+
+It's good to up state while using context.
+
+# Error Boundries
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+
+"""
+Only class components can be error boundaries.
+"""
+
+"""
+You need to be carefull about Where to use Error Boundary it may couse security issue if you don't use it at all.
+"""
+
+"""
+Error boundaries do not catch errors inside event handlers.
+"""
+
 
 
 

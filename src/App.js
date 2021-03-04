@@ -1,63 +1,26 @@
-import React from "react";
-import {ThemeContext} from "./component/contexts/theme-context";
-import ClassComponent from "./component/ClassComponent";
-import FunctionalComponent from "./component/FunctionalComponent";
-import Greetings from "./component/Greetings";
-import ControlledComponent from "./component/ControlledComponent";
-import CompostionComponent from "./component/CompostionComponent";
-import {useState,useEffect} from "react";
-import ThemedButton from "./component/ThemedButton";
+import ErrorBoundary from "./component/ErrorBoundary";
+import {useState} from "react";
 
-
-
-function App() {
-  const [isLoggedIn,setIsLoggedIn] = useState(false)
-  const [myList,seMytList] =useState([]);
-  const [count,setCount] =useState(0)
-
-  useEffect(()=>{
-    seMytList([1,2,3,4,5])
-  },[]);
-  let button;
-    if (isLoggedIn){
-      button = <button onClick={handleLog}>Log Out</button>
+export default function App(){
+  const [myError,setMyError]=useState()
+  const [count,setCount]=useState(0)
+  function clickHandeler(){
+    try{
+      setCount(count+1)
     }
-    else{
-      button = <button onClick={handleLog}>Log In</button>
+    catch(error){
+      setMyError(error)
     }
-  function handleLog() {
-    setIsLoggedIn(!isLoggedIn)
   }
-
-  const myComp = myList.map((item)=>{
-    return(
-    <li key={item}>{item}</li>
-    )
-  });
-
-
-  function handelClick() {
-    setCount(count+1)
+  if(myError){
+    return <h1>Got some error</h1>
   }
-  return (
-    <div className="App">
-      <ClassComponent prop="Class Prop" count={count} handelClick={handelClick}/>
-      <FunctionalComponent prop="Function Prop"/>
-      {button}
-      {isLoggedIn? <h2>you have looged in </h2>:<h2> log in please</h2>}
-      <Greetings isLoggedIn={isLoggedIn}/>
-      <ul>{myComp}</ul>
-      <ControlledComponent/>
-      <CompostionComponent/>
-          <ThemeContext.Provider value="light">
-          <ThemedButton>
-          Change Theme
-          </ThemedButton>
-          </ThemeContext.Provider>
-    </div>
-  );
+  return(
+    <ErrorBoundary>
+      <h1>I am good</h1>
+      <button onClick={clickHandeler}>{count}</button>
+    </ErrorBoundary>
+    
+  )
 }
 
-
-
-export default App;
