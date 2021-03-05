@@ -1,26 +1,51 @@
-import ErrorBoundary from "./component/ErrorBoundary";
-import {useState} from "react";
+import React,{useRef} from "react";
 
 export default function App(){
-  const [myError,setMyError]=useState()
-  const [count,setCount]=useState(0)
-  function clickHandeler(){
-    try{
-      setCount(count+1)
-    }
-    catch(error){
-      setMyError(error)
-    }
-  }
-  if(myError){
-    return <h1>Got some error</h1>
-  }
-  return(
-    <ErrorBoundary>
-      <h1>I am good</h1>
-      <button onClick={clickHandeler}>{count}</button>
-    </ErrorBoundary>
-    
+  const ref = useRef();
+  return (
+    <React.Fragment>
+    <h1>I am having blast!!!</h1>
+    <FancyButton ref={ref}>Click Me!</FancyButton>
+    </React.Fragment>
   )
 }
+
+const FancyButton = React.forwardRef((props,ref)=>{
+  return(
+    <button ref={ref} className="FancyButton">
+    {props.children}
+    </button>
+  )
+});
+
+function higherOrderComponent(WrappedComponent,selectData){
+
+  return class extends React.Component{
+    constructor(props){
+      super(props);
+      this.handelChange = this.handelChange.bind(this);
+      this.state={
+        data = selectData(DataSource,props)
+      };
+    }
+
+    componentDidMount(){
+      DataSource.addChangeListener(this.handelChange);
+    }
+
+    componentWillUnmount(){
+      DataSource.removeChangeListener(this.handelChange);
+    }
+
+    handelChange(){
+      this.state({
+        data = selectData(DataSource,this.props)
+      })
+    };
+
+    render(){
+        return (<WrappedComponent data={this.state.data} {...this.props}/>
+        )}
+    }
+  }
 
