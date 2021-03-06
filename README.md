@@ -433,17 +433,14 @@ Fragments let you group a list of children without adding extra nodes to the DOM
 key is the only attribute that can be passed to Fragment.
 """
 
-
 # Higher Order Functions
 
 A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
 
 const myComponent = higherOrderComponent(otherComponent)
-
 """
 Note that a HOC doesn’t modify the input component, nor does it use inheritance to copy its behavior. Rather, a HOC composes the original component by wrapping it in a container component. A HOC is a pure function with zero side-effects.
 """
-
 Don’t Mutate the Original Component. Use Composition.a
 There are a few problems with this. One is that the input component cannot be reused separately from the enhanced component.
 
