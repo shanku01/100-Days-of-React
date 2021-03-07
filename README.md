@@ -448,6 +448,20 @@ There are a few problems with this. One is that the input component cannot be re
 
 ## Day 12 of 100 Days of code
 
+"""
+HOC note -
+1. Don’t Use HOCs Inside the render Method.
+2. Use static method.
+3. Refs Aren’t Passed Through.
+"""
+
+
+# Integration with other Librarires
+
+
+
+
+
 
 
 
