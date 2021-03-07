@@ -459,6 +459,31 @@ HOC note -
 # Integration with other Librarires
 
 
+## Day 13 of 100 Days of Code
+
+# JSX in depth
+
+Using Dot Notation for JSX Type.
+
+User-Defined Components Must Be Capitalized.
+
+You cannot use a general expression as the React element type. If you do want to use a general expression to indicate the type of the element, just assign it to a capitalized variable first. 
+
+# props
+You can pass any JavaScript expression as a prop, by surrounding it with {}. 
+
+If you pass no value for a prop, it defaults to true. 
+
+You can pass a string literal as a prop. 
+
+f you already have props as an object, and you want to pass it in JSX, you can use ... as a “spread” operator to pass the whole props object.
+
+# Children
+
+
+
+
+
 
 
 
