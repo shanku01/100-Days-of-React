@@ -480,7 +480,7 @@ f you already have props as an object, and you want to pass it in JSX, you can u
 
 # Children
 
-
+Booleans, Null, and Undefined Are Ignored. Else can be sent.
 
 
 
