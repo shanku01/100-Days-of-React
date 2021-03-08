@@ -483,6 +483,13 @@ f you already have props as an object, and you want to pass it in JSX, you can u
 Booleans, Null, and Undefined Are Ignored. Else can be sent.
 
 
+##  Day 14 of React
+
+# Optimizing
+
+# portals
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
 
 
 
