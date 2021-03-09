@@ -492,6 +492,29 @@ Portals provide a first-class way to render children into a DOM node that exists
 
 
 
+## Day 15 of React
+
+# Profiler
+
+The Profiler measures how often a React application renders and what the “cost” of rendering is.
+
+# Life without ES6
+import - require
+
+Auto Binding of function
+
+You can use Mixin
+
+# LIfe without JSX
+JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment.
+
+# Reconciliation
+When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements.
+
+
+
+
+
 
 
 
