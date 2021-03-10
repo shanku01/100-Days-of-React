@@ -515,6 +515,25 @@ When diffing two trees, React first compares the two root elements. The behavior
 
 ## Day 16 of 100 days of React
 
+# Ref and DOM
+
+Refs provide a way to access DOM nodes or React elements created in the render method.
+
+Managing focus, text selection, or media playback.
+
+Triggering imperative animations.
+
+Integrating with third-party DOM libraries.
+
+""" Don’t Overuse Refs """
+
+"""
+If the ref callback is defined as an inline function, it will get called twice during updates, first with null and then again with the DOM.
+"""
+
+
+# Render Props
+
 
 
 
