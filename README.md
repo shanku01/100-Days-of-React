@@ -513,6 +513,10 @@ When diffing two trees, React first compares the two root elements. The behavior
 
 
 
+## Day 16 of 100 days of React
+
+
+
 
 
 
