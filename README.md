@@ -532,10 +532,20 @@ If the ref callback is defined as an inline function, it will get called twice d
 """
 
 
-# Render Props
+
 
 
 ## Day 17 of 100 Days of React
+
+# Render Props
+The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function.
+Libraries that use render props include React Router, Downshift and Formik.
+
+More concretely, a render prop is a function prop that a component uses to know what to render.
+
+"""
+Using a render prop can negate the advantage that comes from using React.PureComponent if you create the function inside a render method. This is because the shallow prop comparison will always return false for new props, and each render in this case will generate a new value for the render prop.
+"""
 
 
 

@@ -1,21 +1,52 @@
+import { event } from "jquery";
 import React from "react";
+import { ReactComponent as Logo1 } from './logo.svg';
 
-class App extends React.Component{
+class Logo extends React.Component{
+    render(){
+        const mouse =this.props.mouse;
+        return <Logo1 alt="logo" style={{
+            position:'absolute',
+            left: mouse.x,
+            top: mouse.y,
+            width:'40px'
+        }}/>
+    }
+}
+
+class Movement extends React.Component{
     constructor(props){
         super(props)
-        this.myRef = React.createRef();
-        this.handleClick = this.handleClick.bind(this);
+        this.state ={
+            x:0,
+            y:0
+        }
+        this.handleMove = this.handleMove.bind(this);
     }
 
-    handleClick(){
-        this.myRef.current.focus();   
+    handleMove(event){
+        this.setState({
+            x :event.clientX,
+            y :event.clientY
+        }) 
     }
 
     render(){
-        return <>
-        <input ref = {this.myRef}/>
-        <button onClick={this.handleClick}>click</button>
-        </>
+        return <div style={{height:'100vh'}} onMouseMove={this.handleMove}>
+        {this.props.render(this.state)}
+        </div>
     }
+}
+
+function App(){
+    function renderLogo(mouse){
+        return <Logo mouse={mouse}/>
+    }
+    return(
+        <>
+        <h1>Move your mouse to Move logo</h1>
+        <Movement render={renderLogo}/>
+        </>
+    )
 }
 export default App;
