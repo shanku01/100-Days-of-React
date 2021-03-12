@@ -549,8 +549,33 @@ Using a render prop can negate the advantage that comes from using React.PureCom
 
 
 
+## Day 18 of 100 Days of React
 
+"""
+Static type checkers like Flow and TypeScript identify certain types of problems before you even run your code. They can also improve developer workflow by adding features like auto-completion. For this reason, we recommend using Flow or TypeScript instead of PropTypes for larger code bases.
+"""
 
+# Flow
+"""
+f your project was set up using Create React App, the Flow annotations are already being stripped by default.
+"""
+
+# TypeScript
+"""
+SuperSet of JS.
+"""
+
+npx create-react-app my-app --template typescript
+
+# Strict Mode
+StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.
+
+StrictMode currently helps with:
+Identifying components with unsafe lifecycles
+Warning about legacy string ref API usage
+Warning about deprecated findDOMNode usage
+Detecting unexpected side effects
+Detecting legacy context API
 
 
 
