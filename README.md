@@ -578,6 +578,36 @@ Detecting unexpected side effects
 Detecting legacy context API
 
 
+## Day 19 of 100 days of react
+
+# propTypes
+Is used to check valid props.
+
+Requiring Single Child
+With PropTypes.element you can specify that only a single child can be passed to a component as children.
+
+defaultProps is used to create a default value.
+
+# Uncontrolled Components
+Where form data is handled by the DOM itself.
+
+Uncontrolled Component are good if want quick and dirty, kinda lazy, that's why risky.
+
+Default Values ->
+As value attribute will override value in DOM.
+
+File type - Always uncontrolled.
+
+
+# Web Component
+React and Web Components are built to solve different problems. Web Components provide strong encapsulation for reusable components, while React provides a declarative library that keeps the DOM in sync with your data. The two goals are complementary. As a developer, you are free to use React in your Web Components, or to use Web Components in React, or both.
+
+
+
+
+
+
+
 
 
 
