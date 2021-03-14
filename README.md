@@ -604,6 +604,43 @@ React and Web Components are built to solve different problems. Web Components p
 
 
 
+## Day 20 of 100 Days of React
+
+# React Top-Level API
+
+# Componet
+Helps UI to split in reusable code.
+PureComponent can have shouldComponentUpdate()
+
+React.Memo - HOC
+checks props changes
+
+# React Element 
+JSX
+
+# Transforming elemment
+React.Children
+helps is props.children
+
+isValidElement
+true/false
+
+cloneElement
+return new element as starting point
+
+# Fragment
+Wrapper without weight on DOM
+
+# Ref
+To save events
+
+# Hooks
+Helps to use class fetures in function
+
+# Lazy
+create component that can be loaded dynamically
+use suspence to wrap.
+
 
 
 
