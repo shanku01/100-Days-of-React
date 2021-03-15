@@ -643,6 +643,32 @@ use suspence to wrap.
 
 ## Day 21 of 100 days of code
 
+# Component 
+Functional and Class
+
+# Life Cycle
+
+Mounting ->
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+Updating
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+Unmounting
+componentWillUnmount()
+
+Error Handling
+static getDerivedStateFromError()
+componentDidCatch()
+
+
 
 
 
