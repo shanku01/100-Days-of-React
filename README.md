@@ -641,6 +641,8 @@ Helps to use class fetures in function
 create component that can be loaded dynamically
 use suspence to wrap.
 
+## Day 21 of 100 days of code
+
 
 
 
