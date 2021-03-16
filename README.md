@@ -654,25 +654,45 @@ static getDerivedStateFromProps()
 render()
 componentDidMount()
 
-Updating
+Updating->
 static getDerivedStateFromProps()
 shouldComponentUpdate()
 render()
 getSnapshotBeforeUpdate()
 componentDidUpdate()
 
-Unmounting
+Unmounting->
 componentWillUnmount()
 
 Error Handling
 static getDerivedStateFromError()
 componentDidCatch()
 
+Other APIs->
+setState()
+forceUpdate()
 
+Class Properties->
+defaultProps
+displayName
 
+Instance Properties->
+props
+state
 
+"""
+The render() function should be pure, meaning that it does not modify component state, it returns the same result each time it’s invoked, and it does not directly interact with the browser.
+"""
 
+## Day 22 of 100 days of code
 
+"""
+You should not call setState() in the constructor(). Instead, if your component needs to use local state, assign the initial state to this.state directly in the constructor.
+"""
+
+"""
+getDerivedStateFromError() is called during the “render” phase, so side-effects are not permitted. For those use cases, use componentDidCatch() instead.
+"""
 
 
 

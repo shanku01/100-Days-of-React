@@ -1,12 +1,38 @@
+import {Component} from "react";
 
-function App(){
-  
+class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            count:1
+        }
+    }
+
+    componentDidMount(){
+        this.setState((state)=>
+            ({count: state.count+1})
+            );
+    }
+
+    componentWillUnmount(){
+        this.setState({
+            count:""
+        })
+    }
+    
+  render(){
     return(
         <>
-        I am here
+        <div color={this.props.color}>
+        Count = {this.state.count}
+        </div>
         </>
     )
 }
+}
 
+App.defaultProps={
+    color:'red'
+}
 
 export default App;
