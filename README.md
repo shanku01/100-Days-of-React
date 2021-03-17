@@ -695,6 +695,16 @@ getDerivedStateFromError() is called during the “render” phase, so side-effe
 """
 
 
+## Day 23 of 100 days of code
+
+# React DOM
+"""
+The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to.
+"""
+
+
+
+
 
 
 

@@ -34,5 +34,4 @@ class App extends Component{
 App.defaultProps={
     color:'red'
 }
-
 export default App;
