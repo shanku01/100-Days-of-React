@@ -701,8 +701,40 @@ getDerivedStateFromError() is called during the “render” phase, so side-effe
 """
 The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to.
 """
+ReactDOM.render(element, container[, callback])
+Rendering a react element.
+
+ReactDOM.hydrate(element, container[, callback])
+To add function to DOM container.
+
+ReactDOM.unmountComponentAtNode(container)
+Removing element
+
+ReactDOM.findDOMNode(component)
+Finding
+
+ReactDOM.createPortal(child, container)
+Adding child inside DOM and  outside hierarchy.
 
 
+# ReactDOMServer
+The ReactDOMServer object enables you to render components to static markup.
+
+" import ReactDOMServer from 'react-dom/server' "
+
+Refrence
+
+ReactDOMServer.renderToString(element)
+Render a React element to its initial HTML.
+
+ReactDOMServer.renderToStaticMarkup(element)
+Doesn't create extra DOM attributes
+
+ReactDOMServer.renderToNodeStream(element)
+Render a React element to its initial HTML. 
+
+ReactDOMServer.renderToStaticNodeStream(element)
+Doesn't create extra DOM attributes
 
 
 
