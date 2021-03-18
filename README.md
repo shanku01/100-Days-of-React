@@ -736,7 +736,9 @@ Render a React element to its initial HTML.
 ReactDOMServer.renderToStaticNodeStream(element)
 Doesn't create extra DOM attributes
 
+## Day 24 of 100 days of code
 
+# DOM Elements
 
 
 
