@@ -6,12 +6,15 @@ class App extends Component{
         this.state={
             count:1
         }
+        this.handelClick = this.handelClick.bind(this);
     }
 
     componentDidMount(){
         this.setState((state)=>
             ({count: state.count+1})
             );
+        
+
     }
 
     componentWillUnmount(){
@@ -20,11 +23,16 @@ class App extends Component{
         })
     }
     
+    handelClick(){
+        this.setState(state=>{
+            count:state.count+1
+        });
+    }
   render(){
     return(
         <>
         <div color={this.props.color}>
-        Count = {this.state.count}
+        <button onClick={this.handelClick}>Count</button> = {this.state.count}
         </div>
         </>
     )
