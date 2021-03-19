@@ -741,11 +741,9 @@ Doesn't create extra DOM attributes
 # DOM Elements
 
 
-
 ## Day 25 of 100 days of code
-# Sythatic Event
 
-## Day 26 of 100 Days of code
+# Sythatic Event
 
 # Events
 

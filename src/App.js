@@ -30,11 +30,10 @@ class App extends Component{
     }
   render(){
     return(
-        <>
         <div color={this.props.color}>
         <button onClick={this.handelClick}>Count</button> = {this.state.count}
         </div>
-        </>
+
     )
 }
 }
