@@ -24,9 +24,9 @@ class App extends Component{
     }
     
     handelClick(){
-        this.setState(state=>{
-            count:state.count+1
-        });
+        this.setState(state=>({
+            count:state.count+1}
+        ));
     }
   render(){
     return(

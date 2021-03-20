@@ -750,6 +750,55 @@ Doesn't create extra DOM attributes
 # Test Utilities
 
 
+## Day 26 of 100 days of code
+
+# Test Utilities
+
+isElement(element)
+checks element
+
+isElementOfType(element)
+checks element type
+
+isDOMComponent()
+check DOM element
+
+isCompositeComponent()
+checks user function/class
+
+isCompositeComponentWithType()
+checks user function/class type
+
+findAllInRenderedTree(tree,test)
+traverse tree and check all the given test
+
+scryRenderedDOMComponentsWithClass(tree,className)
+traverse tree and check the given class
+
+findRenderedDOMComponentWithClass(tree,className)
+checks for number of classname to be one
+
+scryRenderedDOMComponentsWithTag(tree,tagName)
+checks for tagname is tree
+
+findRenderedDOMComponentWithTag()
+checks for number of tagname to be one
+
+scryRenderedComponentsWithType(tree,componentClass)
+find all instance of component
+
+findRenderedComponentWithType()
+checks for number of instance to be one
+
+renderIntoDocument()
+render data to DOM
+
+Simulate.{eventName}(element,[eventData])
+Simulate an event dispatch on a DOM node with optional eventData event data.
+
+
+
+
 
 
 
