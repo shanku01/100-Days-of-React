@@ -800,6 +800,44 @@ Simulate an event dispatch on a DOM node with optional eventData event data.
 
 # Day 27 of 100 days of code
 
+# Test Renderer
+This package provides a React renderer that can be used to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment.
+
+
+TestRenderer.create(element, options);
+Create a TestRenderer instance with the passed React element.
+
+TestRenderer.act(callback);
+Use this version of act() to wrap calls to TestRenderer.create and testRenderer.update.
+
+testRenderer.toJSON()
+Return an object representing the rendered tree.
+
+testRenderer.toTree()
+Return an object representing the rendered tree. The representation is more detailed than the one provided by toJSON(), and includes the user-written components.
+
+testRenderer.update(element)
+Re-render the in-memory tree with a new root element.
+
+testRenderer.unmount()
+Unmount the in-memory tree, triggering the appropriate lifecycle events.
+
+testRenderer.getInstance()
+Return the instance corresponding to the root element, if available. This will not work if the root element is a function component because they don’t have instances.
+
+testRenderer.root
+Returns the root “test instance” object that is useful for making assertions about specific nodes in the tree. 
+
+testInstance.find(test)
+Find a single descendant test instance for which test(testInstance) returns true.
+
+testInstance.findByType(type)
+Find a single descendant test instance with the provided type.
+
+testInstance.findAll(test)
+Find all descendant test instances for which test(testInstance) returns true.
+
+
 
 
 
