@@ -841,7 +841,41 @@ Find all descendant test instances for which test(testInstance) returns true.
 
 # Day 28 of 100 days of code
 
+# Test Renderer
 
+testInstance.findByType(type)
+Find a single descendant test instance with the provided type.
+
+testInstance.findByProps(props)
+Find a single descendant test instance with the provided props.
+
+testInstance.findAll(test)
+Find all descendant test instances for which test(testInstance) returns true.
+
+testInstance.findAllByType(type)
+Find all descendant test instances with the provided type.
+
+testInstance.findAllByProps(props)
+Find all descendant test instances with the provided props.
+
+testInstance.instance
+The component instance corresponding to this test instance.
+
+testInstance.type
+The component type corresponding to this test instance.
+
+testInstance.props
+The props corresponding to this test instance.
+
+testInstance.parent
+The parent test instance of this test instance.
+
+testInstance.children
+The children test instances of this test instance.
+
+
+# Single-page Application
+A single-page application is an application that loads a single HTML page and all the necessary assets (such as JavaScript and CSS) required for the application to run. Any interactions with the page or subsequent pages do not require a round trip to the server which means the page is not reloaded.
 
 
 
