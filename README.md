@@ -883,7 +883,14 @@ A single-page application is an application that loads a single HTML page and al
 Let you use state and other React features without writing a class.
 
 
+const [count,setCount] = useState(0);
+  return(
+    <>
+    <button onClick={()=> setCount(count+1)}>{count}</button>
+    </>
+  );
 
+  
 
 
 
