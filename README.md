@@ -840,7 +840,6 @@ Find all descendant test instances for which test(testInstance) returns true.
 
 
 # Day 28 of 100 days of code
-
 # Test Renderer
 
 testInstance.findByType(type)
@@ -878,6 +877,10 @@ The children test instances of this test instance.
 A single-page application is an application that loads a single HTML page and all the necessary assets (such as JavaScript and CSS) required for the application to run. Any interactions with the page or subsequent pages do not require a round trip to the server which means the page is not reloaded.
 
 
+# Day 29 of 100 days of code
+
+# React Hooks
+Let you use state and other React features without writing a class.
 
 
 
