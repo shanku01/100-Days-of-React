@@ -909,6 +909,9 @@ const [count,setCount] = useState(0);
   
   # useState()
   lets you use state in functional component
+
+  # useEffect()
+  lets you use life cycle method
   
   # Day 32 of 100 Days of Code  
 
