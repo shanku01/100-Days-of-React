@@ -897,9 +897,19 @@ const [count,setCount] = useState(0);
   # Hooks
   Effect hook for life cycle.
 
-  
-  # Day 31 of 100 Days of Code
+ Rules
+  """
+  Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
 
+  Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions.
+  """
+
+  
+  ## Day 31 of 100 Days of Code
+  
+  # useState()
+  lets you use state in functional component
+  
   # Day 32 of 100 Days of Code  
 
 
