@@ -916,8 +916,15 @@ const [count,setCount] = useState(0);
   ## Day 32 of 100 Days of Code  
   
   # Rules of react
+  eslint-plugin-react-hooks plugin for hooks rule.
 
-  f
+  Custom Hook
+  A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
+
+  useReducer to use Reducers
+  
+    
+  
 
 
 
