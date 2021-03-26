@@ -894,8 +894,13 @@ const [count,setCount] = useState(0);
 
   # Day 30 of 100 Days 0f React
 
+  # Hooks
+  Effect hook for life cycle.
 
+  
+  # Day 31 of 100 Days of Code
 
+  # Day 32 of 100 Days of Code  
 
 
 
