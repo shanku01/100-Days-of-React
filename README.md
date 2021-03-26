@@ -913,8 +913,11 @@ const [count,setCount] = useState(0);
   # useEffect()
   lets you use life cycle method
   
-  # Day 32 of 100 Days of Code  
+  ## Day 32 of 100 Days of Code  
+  
+  # Rules of react
 
+  f
 
 
 
